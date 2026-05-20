@@ -1,0 +1,11 @@
+fullnameOverride: ${name}
+node:
+  tolerateAllTaints: true
+controller:
+  serviceAccount:
+    create: true
+    name: ${name}
+    annotations: 
+      eks.amazonaws.com/role-arn: ${role}
+image:
+  repository: 602401143452.dkr.ecr.${region}.amazonaws.com/eks/aws-efs-csi-driver

@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["eks:DescribeNodegroup", "eks:UpdateNodegroupConfig"],
+      "Resource": "arn:aws:eks:ap-south-1:321133955826:nodegroup/scarfall-prod/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["ec2:Describe*"],
+      "Resource": "*"
+    }
+  ]
+}
