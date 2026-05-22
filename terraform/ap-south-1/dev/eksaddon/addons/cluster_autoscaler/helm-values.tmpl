@@ -1,0 +1,15 @@
+fullnameOverride: ${name}
+cloudProvider: aws
+autoDiscovery:
+  clusterName: ${cluster_name}
+awsRegion: ${region}
+extraArgs:
+  balance-similar-node-groups: true
+  skip-nodes-with-system-pods: false
+priorityClassName: ""
+rbac:
+  serviceAccount:
+    create: true
+    name: ${name}
+    annotations: 
+      eks.amazonaws.com/role-arn: ${role}

@@ -1,0 +1,9 @@
+fullnameOverride: ${name}
+node:
+  tolerateAllTaints: true
+controller:
+  serviceAccount:
+    create: true
+    name: ${name}
+    annotations: 
+      eks.amazonaws.com/role-arn: ${role}

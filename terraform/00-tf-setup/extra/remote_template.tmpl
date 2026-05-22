@@ -1,0 +1,12 @@
+%{ for remote in remotes ~}
+data "terraform_remote_state" "${remote}" {
+  backend = "s3"
+
+  config = {
+    bucket  = "${bucket_name}"
+    region  = "${region}"
+    key     = "${account}/${region}/${remote}.tfstate"
+    profile = "${profile}"
+  }
+}
+%{ endfor ~}

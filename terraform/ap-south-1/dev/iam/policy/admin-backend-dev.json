@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["lambda:InvokeFunction"],
+      "Resource": "arn:aws:lambda:ap-south-1:148761651852:function:lambda-kubectl"
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::scarfall-dev-game-data",
+        "arn:aws:s3:::scarfall-dev-game-data/*"
+      ]
+    }
+  ]
+}
