@@ -1,0 +1,12 @@
+# Local .terraform directories
+**/.terraform/*
+#**/00-tf-setup/generated
+**/00-tf-setup/terraform.tfstate.backup
+**/plan/tf*
+**/.terraform.lock.hcl
+**/.DS_Store
+**/backend.tf
+**/vars-main.tf
+**/remote-*.tf
+**/tf-plan
+#**/backup/**
